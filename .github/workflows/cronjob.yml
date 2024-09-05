@@ -1,0 +1,27 @@
+name: Run main.py everyday
+on:
+  schedule:
+    - cron: "50 11 * * *" #Run everyday at 11:50AM UTC (8:50AM BRT)
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Update pip
+        run: |
+          python3 -m pip install --upgrade pip
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
+      - name: Run main script
+        env:
+          BSKY_USER: ${{secrets.BSKY_USER}}
+          BSKY_PASS: ${{secrets.BSKY_PASS}}
+        run: |
+          python3 main.py
