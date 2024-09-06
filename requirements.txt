@@ -101,7 +101,7 @@ reportlab==4.2.2
 requests==2.32.3
 requests-oauthlib==2.0.0
 requests-unixsocket==0.3.0
-resolvelib==1.0.1
+resolvelib==0.5.3
 SecretStorage==3.3.3
 simplejson==3.19.3
 six==1.16.0
