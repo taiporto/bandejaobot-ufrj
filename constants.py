@@ -1,4 +1,5 @@
 from enum import Enum
+from type_helpers import TCampus
 
 class Meals(Enum):
   LUNCH = 'Almoço'
@@ -18,13 +19,13 @@ WEEKDAYS = {
   "Friday": "Sexta-Feira"
 }
 
-CAMPI = {
-  "IFCSPV": {
+CAMPI: dict[Campi, TCampus] = {
+  Campi.IFCSPV: {
     "url":
     "https://docs.google.com/spreadsheets/d/1gymUpZ2m-AbDgH7Ee7uftbqWmKBVYxoToj28E8c-Dzc/pubhtml",
     "name": "IFCS/PV",
   },
-  "fundao": {
+  Campi.FUNDAO: {
     "url":
     "https://docs.google.com/spreadsheets/d/1YvCqBrNw5l4EFNplmpRBFrFJpjl4EALlVNDk3pwp_dQ/pubhtml",
     "name": "Fundão",
