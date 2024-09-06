@@ -19,7 +19,7 @@ charset-normalizer==3.3.2
 cli-exit-tools==1.2.6
 click==8.1.7
 colorama==0.4.6
-cryptography==43.0.1
+cryptography==41.0.7
 Deprecated==1.2.14
 dill==0.3.8
 distro==1.9.0
