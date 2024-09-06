@@ -10,4 +10,4 @@ def authenticate():
   return client
 
 def send_post(text, reply_to=None):
-  client.send_post(text=text, reply_to=reply_to)
+  return client.send_post(text=text, reply_to=reply_to)
