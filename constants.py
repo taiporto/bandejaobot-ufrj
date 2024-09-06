@@ -1,4 +1,5 @@
 from enum import Enum
+from typing import Dict
 from type_helpers import TCampus
 
 class Meals(Enum):
@@ -19,7 +20,7 @@ WEEKDAYS = {
   "Friday": "Sexta-Feira"
 }
 
-CAMPI: dict[Campi, TCampus] = {
+CAMPI: Dict[Campi, TCampus] = {
   Campi.IFCSPV: {
     "url":
     "https://docs.google.com/spreadsheets/d/1gymUpZ2m-AbDgH7Ee7uftbqWmKBVYxoToj28E8c-Dzc/pubhtml",

@@ -32,7 +32,6 @@ def get_menus_from_url(url):
 
 
   if (lunch_df is not None) and (dinner_df is not None):
-    print("Resultado pronto!")
     print(lunch_df)
     print(dinner_df)
     return [lunch_df, dinner_df]
