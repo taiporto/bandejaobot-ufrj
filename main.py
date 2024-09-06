@@ -217,7 +217,7 @@ def postTweets(stringArray):
       firstTweet = client.send_post(newTweets[0])
       parent = models.create_strong_ref(firstTweet)
       root = models.create_strong_ref(firstTweet)
-      client.create_tweet(text=newTweets[1],
+      client.send_post(text=newTweets[1],
                         reply_to=models.AppBskyFeedPost.ReplyRef(parent=parent, root=root))
     else:
       client.send_post(string)
