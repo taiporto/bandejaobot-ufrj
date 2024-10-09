@@ -2,6 +2,10 @@ from enum import Enum
 from typing import Dict
 from type_helpers import TCampus
 
+class SocialMedia(Enum):
+  TWITTER = 'twitter'
+  BLUESKY = 'bluesky'
+
 class Meals(Enum):
   LUNCH = 'Almoço'
   DINNER = 'Jantar'
