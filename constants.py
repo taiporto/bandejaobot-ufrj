@@ -13,6 +13,16 @@ class Meals(Enum):
 class Campi(Enum):
   IFCSPV = "IFCS/PV"
   FUNDAO = "Fundão"
+  
+class Plates(Enum):
+  ENTREE = "Entrada"
+  MAIN = "Prato Principal"
+  VEGETARIAN = "Prato Vegetariano"
+  VEGAN = "Prato Vegano"
+  GARNISH = "Guarnição"
+  SIDE = "Acompanhamentos"
+  DESSERT = "Sobremesa"
+  BEVERAGE = "Refresco"
 
 WEEKDAYS = {
   "Saturday": "Sábado",
@@ -37,17 +47,14 @@ CAMPI: Dict[Campi, TCampus] = {
   }
 }
 
-WORD_TO_EMOJI = {
+WORD_TO_EMOJI: Dict[Plates, str] = {
   "Entrada": "🥗",
   "Prato Principal": "🍲",
   "Prato Vegetariano": "🥦",
   "Prato Vegano": "🥦",
   "Guarnição": "🥘",
-  "Guarnição 1": "🥘",
-  "Guarnição 2": "🥘",
   "Acompanhamentos": "🍛",
   "Acompanhamento": "🍛",
   "Sobremesa": "🍬",
-  "Sobremesa ": "🍬",
   "Refresco": "🥤"
 }
